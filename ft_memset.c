@@ -1,46 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 17:06:18 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/15 11:15:10 by averdejo         ###   ########.fr       */
+/*   Created: 2023/03/15 16:20:36 by averdejo          #+#    #+#             */
+/*   Updated: 2023/03/15 17:40:09 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
+#include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int		len;
-	char	*chr;
+	size_t			i;
+	unsigned char	*a;
 
-	c = (unsigned char) c;
-	len = 0;
-	chr = (char *) s;
-	while (chr[len] != '\0')
-		len++;
-	while (len >= 0)
+	a = (unsigned char *) b;
+	i = 0;
+	while (len > i)
 	{
-		if (chr[len] == c)
-			return (chr + len);
-		len--;
+		a[i] = c;
+		i++;
 	}
-	return (NULL);
+	b = (void *) a;
+	return (b);
 }
 
 /*int	main(void)
 {
-	const char	*s1;
-	int	s2;
+	char	b[50] = "Hola buenas que tal";
+	char	c = 'a';
+	size_t	len = 10;
 
-	s1 = "abbbbbbbb";
-	s2 = 'a';
-	printf("%s\n", ft_strrchr(s1, s2));
-	printf("%s\n", strrchr(s1, s2));
-	//printf("%s\n", prueba(s1, s2));
+	printf("%s\n", b);
+	printf("Despues:  %s\n", memset(b, c, len));
+	printf("Despues:  %s\n", ft_memset(b, c, len));
 	return (0);
 }*/
