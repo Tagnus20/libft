@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 17:56:51 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/16 15:12:50 by averdejo         ###   ########.fr       */
+/*   Created: 2023/03/16 13:57:22 by averdejo          #+#    #+#             */
+/*   Updated: 2023/03/16 19:27:47 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 //#include <string.h>
+//#include <stdio.h>
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*c_src;
 	char	*c_dst;
-	size_t	i;
+	char	*c_src;
 
-	i = 0;
-	c_src = (char *) src;
 	c_dst = (char *) dst;
+	c_src = (char *) src;
 	if (c_src == 0 && c_dst == 0)
 		return (0);
-	while (n > i)
-	{
-		c_dst[i] = c_src[i];
-		i++;
-	}
-	dst = (void *) c_dst;
+	if (dst < src)
+		return (ft_memcpy(dst, src, len));
+	while (dst > src && len--)
+		c_dst[len] = c_src[len];
 	return (dst);
 }
 
 /*int	main(void)
 {
-	const char src[50] = "http://www.tutorialspoint.com";
-	char dest[50] = "Heloooo!!";
+   char dest[] = "oldstring";
+   const char src[]  = "newstring";
 
-	//printf("Before memcpy dest = %s\n", dest);
-	//ft_memcpy(dest, src, strlen(src) + 1);
-	//printf("After memcpy dest = %s\n", dest);
-	printf("%s\n", memcpy(dest, src, 5));
-	printf("%s\n", ft_memcpy(dest, src, 5));
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   ft_memmove(dest, src, 9);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
 	return (0);
 }*/
