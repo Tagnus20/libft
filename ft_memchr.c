@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 23:35:20 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/20 13:47:13 by averdejo         ###   ########.fr       */
+/*   Created: 2023/03/20 13:02:38 by averdejo          #+#    #+#             */
+/*   Updated: 2023/03/20 14:22:25 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
 //#include <stdio.h>
+//#include <string.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*chr;
-	int		counter;
+	unsigned char	*chr;
+	unsigned char	x;
 
-	counter = 0;
-	c = (unsigned char) c;
-	chr = (char *) s;
-	while (chr[counter] != c)
+	x = (unsigned char) c;
+	chr = (unsigned char *) s;
+	while (n)
 	{
-		if (chr[counter] == '\0')
-			return (0);
+		if (*chr == x)
+			return ((void *)chr);
 		chr++;
+		n--;
 	}
-	return (chr);
+	return (NULL);
 }
-
 /*int	main(void)
 {
-	const char	*s1;
+	const void	*s1;
 	int	s2;
 
 	s1 = "there is so ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
 	s2 = ' ';
-	printf("%s\n", ft_strchr(s1, s2));
-	printf("%s\n", strchr(s1, s2));
-	printf("%s\n", prueba(s1, s2));
+	printf("%s\n", ft_memchr(s1, s2, 10));
+	printf("%s\n", memchr(s1, s2, 10));
 	return (0);
 }*/
