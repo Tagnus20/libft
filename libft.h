@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 11:23:47 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/20 20:44:37 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:27:10 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
-char *ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
