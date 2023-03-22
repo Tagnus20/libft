@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 20:32:10 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/21 12:25:11 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/03/22 17:28:51 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str[i] = s[start + i];
 		++i;
 	}
-	str[i] = 0;
+	str[i] = '\0';
 	return (str);
 }

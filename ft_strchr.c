@@ -6,12 +6,13 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 23:35:20 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/20 13:47:13 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/03/22 16:20:01 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -24,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 	while (chr[counter] != c)
 	{
 		if (chr[counter] == '\0')
-			return (0);
+			return (NULL);
 		chr++;
 	}
 	return (chr);
