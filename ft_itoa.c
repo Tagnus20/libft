@@ -6,12 +6,32 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 13:25:51 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/24 00:37:48 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/03/24 19:55:05 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
+
+int	ft_digitlen(int n)
+{
+	int	len;
+
+	len = 0;
+	if (n < 0)
+	{
+		n *= -1;
+		len++;
+	}
+	while (n > 9)
+	{
+		len++;
+		n = n / 10;
+	}
+	if (n >= 0 && n <= 9)
+		len++;
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
@@ -21,29 +41,39 @@ char	*ft_itoa(int n)
 
 	n2 = n;
 	len = 0;
-	while (n2 != 0)
+	len = ft_digitlen(n);
+
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	else
 	{
-		len++;
-		n2 = n2 / 10;
+		x = (char *) malloc((len * sizeof(char) + 1));
+		if (!x)
+			return (NULL);
+		x[len] = '\0';
+		if (n < 0)
+		{
+			x[0] = 45;
+			n *= -1;
+		}
+		if (n == 0)
+		{
+			x[0] = 48;
+			return (x);
+		}
+		while (n > 0)
+		{
+			x[len - 1] = (n % 10) + '0';
+			len--;
+			n = n / 10;
+		}
 	}
-	x = (char *) malloc((len + 1) * sizeof(char));
-	if (!x)
-		return (NULL);
-	x[len] = '\0';
-	while (n != 0 && len != 0)
-	{
-		n2 = n % 10;
-		x[len - 1] = n2 + '0';
-		len--;
-		n = n / 10;
-	}
-	printf("%s\n", x);
 	return (x);
 }
 
 /*int	main(void)
 {
-	int	n = 150;
+	int	n = -623;
 
 	printf("%s\n", ft_itoa(n));
 	printf("%d\n", n);
