@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:30:13 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/29 19:59:12 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/03/29 23:51:30 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,69 +29,51 @@ int	contador(char const *str, char c)
 	return (resultado);
 }
 
-char	*strcreator(char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
+	size_t	c_l;
+	size_t	c_p;
 	int		iaux;
-	char	*aux;
+	char	**array;
 
-	i = 0;
+	array = (char **) malloc((contador(s, c) + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
+	c_l = 0;
+	c_p = 0;
 	iaux = 0;
-	while (s != '\0')
+	while (s[c_p] != '\0')
 	{
-		if (s[i] != c)
+		if (s[c_p] != c && (s[c_p + 1] == c || s[c_p + 1] == '\0'))
 		{
-			i++;
+			array[iaux] = ft_substr(s, c_p - c_l, c_l + 1);
+			c_l = 0;
 			iaux++;
 		}
-		if (s == c)
-		{
-
-		}
-		aux = (char *) malloc(iaux * sizeof(char) + 1);
+		else if (s[c_p] != c)
+			c_l++;
+		c_p++;
 	}
-
-	return (aux);
+	array[iaux] = NULL;
+	return (array);
 }
 
-/*char	**ft_split(char const *s, char c)
-{
-	char	*aux;
-	char	*array[contador (s, c) + 1];
-	int		i;
-	int		iarr;
-
-	iarr = 0;
-	i = 0;
-	aux = ft_strtrim(s, ft_strchr(s, c));
-	return (array);
-}*/
-
-int	main(void)
+/*int	main(void)
 {
 	char	*str;
 	char	c;
+	char	**array;
 
-	str = "Hola que tal ";
+	str = "Hola que tal  estas     tuaseieir pito \n ssss";
 	c = ' ';
-
-	printf("%d\n", contador(str, c));
-	printf("%s\n", strcreator(str, c));
-
+	array = ft_split(str, c);
+	printf("%s\n", array[0]);
+	printf("%s\n", array[1]);
+	printf("%s\n", array[2]);
+	printf("%s\n", array[3]);
+	printf("%s\n", array[4]);
+	printf("%s\n", array[5]);
+	printf("%s\n", array[6]);
+	printf("%s\n", array[7]);
 	return (0);
-}
-/*	while (*s != '\0')
-	{
-		while (*s != c)
-		{
-			aux[i] = *s;
-			i++;
-			s++;
-		}
-		array[iarr] = malloc(ft_strlen(aux) * sizeof(char) + 1);
-		ft_strlcpy(array[iarr], aux, ft_strlen(aux));
-		iarr++;
-		while (*s == c)
-			s++;
-	}*/
+}*/
