@@ -6,11 +6,12 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 13:06:22 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/22 18:26:54 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/03/29 19:54:52 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -28,3 +29,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = end - start;
 	return (ft_substr(s1, start, end));
 }
+
+/*int	main(void)
+{
+	char	*str;
+	char	*set;
+
+	str = "bla bla bla Hola bla bla Hola bla bla HolaHello";
+	set = "Hello";
+	printf("%s\n", ft_strtrim(str, set));
+	return (0);
+}*/
