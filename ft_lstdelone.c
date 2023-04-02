@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/31 17:52:43 by averdejo          #+#    #+#             */
-/*   Updated: 2023/04/02 00:52:32 by averdejo         ###   ########.fr       */
+/*   Created: 2023/04/02 01:09:57 by averdejo          #+#    #+#             */
+/*   Updated: 2023/04/02 16:52:26 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst -> next)
-	{
-		lst = lst -> next;
-	}
-	return (lst);
+	del(lst->content);
+	free(lst);
 }
+
+/*
+	del(lst->content);
+	free(lst);
+
+	del(&lst->content);
+	free(lst->content);
+	La memoria de ’next’ no debe liberarse. Se refiere al nodo que apunta next? o a next?
+*/
