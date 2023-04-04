@@ -6,12 +6,10 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 13:57:22 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/16 19:27:47 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/04 20:24:38 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -30,7 +28,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-/*int	main(void)
+/*#include <string.h>
+#include <stdio.h>
+
+int	main(void)
 {
    char dest[] = "oldstring";
    const char src[]  = "newstring";

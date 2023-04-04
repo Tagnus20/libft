@@ -6,14 +6,14 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:30:13 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/30 19:06:51 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:35:18 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	contador(char const *str, char c)
+static int	contador(char const *str, char c)
 {
 	int	resultado;
 	int	i;
@@ -43,7 +43,7 @@ static void	*ft_free(char **word)
 	return (NULL);
 }
 
-char	**asignaarray(char const *s, char c, char **array)
+static char	**asignaarray(char const *s, char c, char **array)
 {
 	size_t	c_l;
 	size_t	c_p;

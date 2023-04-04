@@ -6,12 +6,9 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 15:05:03 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/10 18:42:02 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:16:21 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
-//#include <ctype.h>
 
 int	ft_isalnum(int c)
 {
@@ -21,12 +18,15 @@ int	ft_isalnum(int c)
 		return (1);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
 {
 		char	c;
 
 	c = '/';
-	printf("%d\n", isalnum(c));
+	printf("FUNCION ORIGINAL %d\n", isalnum(c));
 	printf("MI FUNCION %d\n", ft_isalnum(c));
 	if (isalnum(c))
 		printf("%c is an alphabet\n", c);

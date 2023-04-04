@@ -6,14 +6,13 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 13:25:51 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/29 18:44:35 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:58:46 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_digitlen(int n)
+static int	ft_digitlen(int n)
 {
 	int	len;
 
@@ -61,7 +60,9 @@ char	*ft_itoa(int n)
 	return (x);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
 	int	n = -623;
 

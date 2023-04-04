@@ -6,12 +6,9 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 12:54:00 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/09 15:04:14 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:32:07 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_isdigit(int c)
 {
@@ -21,12 +18,15 @@ int	ft_isdigit(int c)
 		return (1);
 }
 
-/*int main () 
+/*#include <stdio.h>
+#include <ctype.h>
+
+int main ()
 {
-	char	c;
+	unsigned char	c;
 
 	c = 'a';
-	printf("%d\n", isdigit(c));
+	printf("FUNCION ORIGINAL %d\n", isdigit(c));
 	printf("MI FUNCION %d\n", ft_isdigit(c));
 	if (isdigit(c))
 		printf("%c is a digit\n", c);

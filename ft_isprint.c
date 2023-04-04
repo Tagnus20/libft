@@ -6,12 +6,9 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:09:38 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/10 18:47:37 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:42:15 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
-//#include <ctype.h>
 
 int	ft_isprint(int c)
 {
@@ -21,13 +18,19 @@ int	ft_isprint(int c)
 		return (0);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
 {
-	char	c;
+	unsigned char	c;
 
-	c = 56;
-	printf(" %d\n", isprint(c));
+	c = 33;
+	printf("FUNCION ORIGINAL %d\n", isprint(c));
 	printf("Mi función %d\n", ft_isprint(c));
-
+	if (ft_isprint(c))
+		printf("%c is printable\n", c);
+	else
+		printf("%c is not printable\n", c);
 	return (0);
 }*/
