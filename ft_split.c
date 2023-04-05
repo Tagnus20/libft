@@ -6,12 +6,11 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:30:13 by averdejo          #+#    #+#             */
-/*   Updated: 2023/04/04 17:35:18 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 13:17:45 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	contador(char const *str, char c)
 {
@@ -81,13 +80,15 @@ char	**ft_split(char const *s, char c)
 	return (array);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
 	char	*str;
 	char	c;
 	char	**array;
 
-	str = "Hola que tal  estas     tuaseieir pito \n ssss";
+	str = "Hola que tal  estas     tuaseieir pito  ssss";
 	c = ' ';
 	array = ft_split(str, c);
 	printf("%s\n", array[0]);

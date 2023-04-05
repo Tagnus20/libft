@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 16:20:36 by averdejo          #+#    #+#             */
-/*   Updated: 2023/04/04 22:10:20 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 11:39:37 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memset(void *b, int c, size_t len)
 int	main(void)
 {
 	char	b[50] = "Hola buenas que tal";
-	char	c = 'a';
+	char	c = '0';
 	size_t	len = 10;
 
 	printf("Antes de memset: %s\n", b);

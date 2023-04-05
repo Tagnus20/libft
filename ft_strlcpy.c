@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:46:08 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/10 18:23:58 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 13:20:13 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (len);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
 	char	dest[0];
-	char	src[] = "Hola mundo";
-	size_t	size = 11;
-	
-	printf("La cadena copiada es: %lu\n", ft_strlcpy(dest, src, size));
+	char	src[] = "Hola mundosdsdsdsd";
+	size_t	size = 30;
+
+	printf("longitud cadena copiada: %lu\n", ft_strlcpy(dest, src, size));
 	//printf("La cadena copiada es: %lu\n", strlcpy(dest, src, size));
 	printf("La cadena copiada es: %s\n", dest);
 	return (0);

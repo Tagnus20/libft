@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 20:32:10 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/30 18:34:59 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 13:11:45 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+{
+	char const		*str;
+	unsigned int	start;
+	size_t			len;
+
+	str = "Hola buenas que tal estas";
+	start = 5;
+	len = 16;
+	printf("%s\n", ft_substr(str, start, len));
+	return (0);
+}*/

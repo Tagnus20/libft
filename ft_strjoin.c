@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 12:03:19 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/21 12:41:50 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:34:51 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,17 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+{
+	char const	*str;
+	char const	*str1;
+
+	str = "Hola Buenas ";
+	str1 = "Que tal estas?";
+
+	printf("%s\n", ft_strjoin(str, str1));
+	return (0);
+}*/

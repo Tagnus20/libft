@@ -6,7 +6,7 @@
 #    By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 11:21:23 by averdejo          #+#    #+#              #
-#    Updated: 2023/04/04 19:37:25 by averdejo         ###   ########.fr        #
+#    Updated: 2023/04/05 13:24:55 by averdejo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_strlcpy.c ft_tolower.c ft_isalnum.c \
 	  ft_memcmp.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 	  ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c\
 	   ft_putstr_fd.c ft_putendl_fd.c ft_split.c ft_putnbr_fd.c
-SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-	       ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+SRCBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
+	       ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 OBJ = $(SRC:%.c=%.o)
 OBJBONUS = $(SRCBONUS:%.c=%.o)
 INCLUDE = libft.h

@@ -6,7 +6,7 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:50:29 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/15 11:15:33 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:54:16 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (str1[i] - str2[i]);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+#include <string.h>
+
+int	main(void)
 {
 	const char	*str1;
 	const char	*str2;
@@ -41,7 +44,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	str1 = "abcdefgh";
 	str2 = "abcdwxyz";
-	n = 4;
+	n = 9;
 	printf("%d\n", strncmp(str1, str2, n));
 	printf("%d\n", ft_strncmp(str1, str2, n));
 	return (0);

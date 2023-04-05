@@ -6,12 +6,10 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 23:35:20 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/22 16:20:01 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:10:37 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -31,15 +29,17 @@ char	*ft_strchr(const char *s, int c)
 	return (chr);
 }
 
-/*int	main(void)
+/*#include <string.h>
+#include <stdio.h>
+
+int	main(void)
 {
 	const char	*s1;
 	int	s2;
 
-	s1 = "there is so ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+	s1 = "there is so many \0 \\0 in t\0his stri\0ng !\0\0\0\0";
 	s2 = ' ';
 	printf("%s\n", ft_strchr(s1, s2));
 	printf("%s\n", strchr(s1, s2));
-	printf("%s\n", prueba(s1, s2));
 	return (0);
 }*/

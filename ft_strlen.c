@@ -6,11 +6,11 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 16:35:17 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/22 17:23:14 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 13:38:15 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -24,7 +24,9 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
 	char	*c;
 

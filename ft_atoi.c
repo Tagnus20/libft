@@ -6,12 +6,9 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 14:39:42 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/15 16:09:58 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 13:15:42 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <stdio.h>
-//#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
@@ -41,7 +38,10 @@ int	ft_atoi(const char *str)
 	return (num * sign);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+//#include <stdlib.h>
+
+int	main(void)
 {
 	const char	*str = "   1234a13";
 

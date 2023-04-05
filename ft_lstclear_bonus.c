@@ -1,45 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 13:02:38 by averdejo          #+#    #+#             */
-/*   Updated: 2023/04/05 10:50:04 by averdejo         ###   ########.fr       */
+/*   Created: 2023/04/02 19:44:42 by averdejo          #+#    #+#             */
+/*   Updated: 2023/04/05 10:47:51 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	unsigned char	*chr;
-	unsigned char	x;
+	t_list	*tmp;
 
-	x = (unsigned char) c;
-	chr = (unsigned char *) s;
-	while (n)
+	if (!lst || !del || !*lst)
+		return ;
+	while ((*lst))
 	{
-		if (*chr == x)
-			return ((void *)chr);
-		chr++;
-		n--;
+		tmp = (*lst)->next;
+		del((*lst)->content);
+		free((*lst));
+		*lst = tmp;
 	}
-	return (NULL);
 }
 
 /*#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
-	const void	*s1;
-	int	s2;
+	t_list	*lista;
+	t_list	*nodo;
+	t_list	*nodo1;
 
-	s1 = "there is so ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	s2 = ' ';
-	printf("%s\n", ft_memchr(s1, s2, 10));
-	printf("%s\n", memchr(s1, s2, 10));
+	lista = NULL;
+	nodo = ft_lstnew("Hola");
+	nodo1 = ft_lstnew("Mundo");
+	ft_lstadd_back(&lista, nodo);
+	ft_lstadd_back(&lista, nodo1);
+	if (!lista)
+		printf("No hay lista\n");
+	else
+		printf("Hay lista\n");
+	ft_lstclear(&lista, del);
 	return (0);
 }*/

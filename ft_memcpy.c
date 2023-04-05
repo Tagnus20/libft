@@ -6,12 +6,10 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 17:56:51 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/21 12:24:33 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 11:02:42 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
@@ -34,10 +32,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-/*int	main(void)
+/*#include <stdio.h>
+#include <string.h>
+
+int	main(void)
 {
-	const char src[50] = "http://www.tutorialspoint.com";
-	char dest[50] = "Heloooo!!";
+	const char src[50] = "Hola buenas tardes";
+	char dest[50] = "Helooooa!!";
 
 	//printf("Before memcpy dest = %s\n", dest);
 	//ft_memcpy(dest, src, strlen(src) + 1);

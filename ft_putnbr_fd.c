@@ -6,16 +6,11 @@
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 18:52:49 by averdejo          #+#    #+#             */
-/*   Updated: 2023/03/30 19:33:40 by averdejo         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:00:43 by averdejo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar(char c, int fd)
-{
-	write(fd, &c, 1);
-}
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -35,5 +30,15 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 	if (n <= 9)
-		ft_putchar((n) + '0', fd);
+		ft_putchar_fd((n) + '0', fd);
 }
+
+/*int	main(void)
+{
+	int	i;
+	int	fd;
+
+	i = 0;
+	fd = 1;
+	ft_putnbr_fd(i, fd);
+}*/
