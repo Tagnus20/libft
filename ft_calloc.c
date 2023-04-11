@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*	*/
 /*	:::	  ::::::::   */
-/*   ft_calloc.c	:+:	  :+:	:+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*	+:+ +:+	 +:+	 */
 /*   By: averdejo <averdejo@student.42madrid.com>   +#+  +:+	   +#+	*/
 /*	+#+#+#+#+#+   +#+	   */
 /*   Created: 2023/03/20 17:00:13 by averdejo	  #+#	#+#	 */
-/*   Updated: 2023/04/04 16:54:31 by averdejo	 ###   ########.fr	   */
+/*   Updated: 2023/04/11 15:48:19 by averdejo         ###   ########.fr       */
 /*	*/
 /* ************************************************************************** */
 
@@ -14,17 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*p;
-	size_t	num_to_reserve;
+	void	*tmp;
 
-	num_to_reserve = count * size;
-	if (num_to_reserve < count || num_to_reserve < size)
+	tmp = malloc(count * size);
+	if (!tmp)
 		return (NULL);
-	p = (void *) malloc(count * size);
-	if (!p)
-		return (NULL);
-	ft_bzero(p, num_to_reserve);
-	return (p);
+	ft_bzero(tmp, count * size);
+	return (tmp);
 }
 
 /*#include <stdio.h>
@@ -38,8 +34,8 @@ int	main(void)
 	size_t	n;
 
 	n = 5;
-	i = 0;
-	p = ft_calloc(SIZE_MAX / 2, 3);
+	i = 1;
+	p = ft_calloc(n, i);
 	c = calloc(n, sizeof(int));
 	if (p == NULL)
 	{
